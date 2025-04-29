@@ -53,7 +53,8 @@ train_set = train_datagen.flow_from_directory(
 
 ## 二、构建卷积神经网络：搭建模型架构
 CNN的设计需要结合任务特点和数据特性，合理选择网络层数、卷积核大小、激活函数等参数。在猫狗图像分类任务中，我们采用经典的CNN架构，由卷积层、池化层、展平层和全连接层组成。结构图如下所示。
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/10186b5edb144eae82b228c3e5ea218c.png)
+![bbaaccda6079d517c482448a08243ac](https://github.com/user-attachments/assets/f1617302-88ba-4320-a7aa-ed95597fd3c5)
+
 本项目的任务是进行猫🐱与狗🐕的识别，属于典型的二分类问题。在网络结构中，卷积层使用了**ReLU**激活函数`(ReLU(x)=max(0, x))`，以引入非线性特性并加速收敛；在输出层，采用**Sigmoid**激活函数，将输出映射至[0,1]区间，以便进行二分类判别。
 
 通过`tf.keras`构建顺序模型添加每一层
@@ -140,7 +141,8 @@ shape如上所示。
 
 我们该如何知道1代表🐱还是🐕呢，我们可以通过`print(train_set.class_indices)`进行获取映射关系，其会将数据集的类别进行自动分类映射。
 识别效果如下(图片取自网络，侵权联系删除谢谢)：
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/415a9d9a07524b0fb326994d954d3c5b.png)
+![image](https://github.com/user-attachments/assets/c79e63d9-7170-45ac-a0b5-aa2711084008)
+
 # 总结与展望
 通过本文的实践，我们完成了一个完整的猫狗图像分类项目，掌握了从数据预处理到模型部署的全流程。然而，这只是CNN应用的起点。希望可以帮您对cnn结果有所了解。
 Enjoy Deep learning!🚀
